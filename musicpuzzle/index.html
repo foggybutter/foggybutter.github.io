@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+	<link rel="stylesheet" href="./css/mystyle.css">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Guess music fan type</title>
+	</head>
+	<body>
+
+		<div class="header">
+			<h1>Let's guess different type of music fan!🎧</h1>
+		</div>
+
+		<div class="container">
+
+			<!--startbutton-->
+			<div class="question" id="Q0">
+				<h2>Click to start!👇🏼 </h2>
+				<h3>(点击将会开始播放音乐🎵)</h3>
+				<a href="#Q1"><button class="start" onclick="showQ1();playAudio(0)">Start!</button></a>
+			</div>
+
+			<!-- Q1 -->
+			<div class="question" id="Q1" style="display:none;">
+				<img class="album" src="img/Pink Venom.jpg" style="width:300px">
+				<h5 class="card-title" style="text-align: center;">Pink Venom - BLACKPINK</h5>
+				<h3>Who likes this type of music the most?</h3>
+				<h3>谁最有可能喜欢这种风格的音乐</h3><br>
+				<div class="button">
+					<a href="#Q2"><button class="no" id="no1" onclick="alert('❌')")>A</button><img class="fan" src="img/no1.jpg"
+							style="width:150px"></a>
+					<a href="#Q2"><button class="yes" id="yes1" onclick="alert('✅')")>B</button><img class="fan" src="img/yes1.jpg"
+							style="width:150px"></a>
+					<a href="#Q2"><button class="no" id="no2" onclick="alert('❌')")>C</button><img class="fan" src="img/no2.jpg"
+							style="width:150px"></a>
+					<a href="#Q2"><button class="no" id="no3" onclick="alert('❌')")>D</button><img class="fan" src="img/no3.jpg"
+							style="width:150px"></a>
+				</div>
+				<br>
+				<a href="#Q2"><button class="next" onclick="showQ2(),pauseAudio(0),playAudio(1)">next</button></a>
+			</div><br>
+
+			<!-- Q2 -->
+			<div class="question" id="Q2" style="display:none;">
+				<img class="album" src="img/Miku.jpg" style="width:300px">
+				<h5 class="card-title" style="text-align: center;">Miku - Anamanaguchi/初音ミク</h5>
+
+				<h3>Who likes this type of music the most?</h3>
+				<h3>谁最有可能喜欢这种风格的音乐</h3><br>
+				<div class="button">
+					<a href="#Q3"><button class="no" onclick="alert('❌')")>A</button><img class="fan" src="img/no4.jpg" style="width:150px"></a>
+					<a href="#Q3"><button class="no" onclick="alert('❌')")>B</button><img class="fan" src="img/no5.jpg" style="width:150px"></a>
+					<a href="#Q3"><button class="yes" onclick="alert('✅')")>C</button><img class="fan" src="img/yes2.jpg" style="width:150px"></a>
+					<a href="#Q3"><button class="no" onclick="alert('❌')")>D</button><img class="fan" src="img/no6.jpg" style="width:150px"></a>
+				</div>
+				<br>
+				<a href="#Q3"><button class="next" onclick="showQ3(),pauseAudio(1),playAudio(2)">next</button></a>
+
+			</div><br>
+
+			<!-- Q3 -->
+			<div class="question" id="Q3" style="display:none;">
+				<img class="album" src="img/mozart.jpg" style="width:300px">
+				<h5 class="card-title" style="text-align: center;">Menuet D major (D大调小步舞曲) - Wolfgang </h5>
+				<h3>Who likes this type of music the most?</h3>
+				<h3>谁最有可能喜欢这种风格的音乐</h3><br>
+				<div class="button">
+					<a href="#Q4"><button class="yes" onclick="alert('✅')")>A</button><img class="fan" src="img/yes3.jpg" style="width:150px"></a>
+					<a href="#Q4"><button class="no" onclick="alert('❌')")>B</button><img class="fan" src="img/no7.jpg" style="width:150px"></a>
+					<a href="#Q4"><button class="no" onclick="alert('❌')")>C</button><img class="fan" src="img/no8.jpg" style="width:150px"></a>
+					<a href="#Q4"><button class="no" onclick="alert('❌')")>D</button><img class="fan" src="img/no9.jpg" style="width:150px"></a>
+				</div>
+				<br>
+				<a href="#Q4"><button class="next" onclick="showQ4(),pauseAudio(2),playAudio(3)">next</button></a>
+
+			</div><br>
+
+			<!-- Q4 -->
+			<div class="question" id="Q4" style="display:none;">
+				<img class="album" src="img/Welcome To New York.jpg" style="width:300px">
+				<h5 class="card-title" style="text-align: center;">Welcome To New York - Taylor Swift</h5>
+				<h3>Who likes this type of music the most?</h3>
+				<h3>谁最有可能喜欢这种风格的音乐</h3><br>
+				<div class="button">
+					<a href="#Q5"><button class="no" onclick="alert('❌')")>A</button><img class="fan" src="img/no10.jpg" style="width:150px"></a>
+					<a href="#Q5"><button class="yes" onclick="alert('✅')")>B</button><img class="fan" src="img/yes4.jpg" style="width:150px"></a>
+					<a href="#Q5"><button class="no" onclick="alert('❌')")>C</button><img class="fan" src="img/no11.jpg" style="width:150px"></a>
+					<a href="#Q5"><button class="no" onclick="alert('❌')")>D</button><img class="fan" src="img/no12.jpg" style="width:150px"></a>
+				</div>
+				<br>
+				<a href="#Q5"><button class="next" onclick="showQ5(),pauseAudio(3),playAudio(4)">next</button></a>
+
+			</div><br>
+
+			<!-- Q5 -->
+			<div class="question" id="Q5" style="display:none;">
+				<img class="album" src="img/buttercup.jpg" style="width:300px">
+				<h5 class="card-title" style="text-align: center;">buttercup - Jack Stauber</h5>
+				<h3>Who likes this type of music the most?</h3>
+				<h3>谁最有可能喜欢这种风格的音乐</h3><br>
+				<div class="button">
+					<a href="#Q6"><button class="no" onclick="alert('❌')")>A</button><img class="fan" src="img/no13.jpg" style="width:150px"></a>
+					<a href="#Q6"><button class="yes" onclick="alert('✅')")>B</button><img class="fan" src="img/yes5.jpg" style="width:150px"></a>
+					<a href="#Q6"><button class="no" onclick="alert('❌')")>C</button><img class="fan" src="img/no14.jpg" style="width:150px"></a>
+					<a href="#Q6"><button class="no" onclick="alert('❌')")>D</button><img class="fan"src="img/no15.jpg" style="width:150px"></a>
+				</div>
+				<br>
+				<a href="#Q6"><button class="next" onclick="showQ6(),pauseAudio(4),playAudio(5)">next</button></a>
+
+			</div><br>
+
+			<!-- Q6 -->
+			<div class="question" id="Q6" style="display:none;">
+				<img class="album" src="img/Hi.jpg" style="width:300px">
+				<h5 class="card-title" style="text-align: center;">Hi - TEMPOREX</h5>
+				<h3>Who likes this type of music the most?</h3>
+				<h3>谁最有可能喜欢这种风格的音乐</h3><br>
+				<div class="button">
+					<a href="#Q7"><button class="no" onclick="alert('❌')")>A</button><img class="fan" src="img/no16.jpg" style="width:150px"></a>
+					<a href="#Q7"><button class="no" onclick="alert('❌')")>B</button><img class="fan" src="img/no17.jpg" style="width:150px"></a>
+					<a href="#Q7"><button class="yes" onclick="alert('✅')")>C</button><img class="fan" src="img/yes6.jpg" style="width:150px"></a>
+					<a href="#Q7"><button class="no" onclick="alert('❌')")>D</button><img class="fan" src="img/no18.jpg" style="width:150px"></a>
+				</div>
+				<br>
+				<a href="#Q7"><button class="next" onclick="showQ7(),pauseAudio(5),playAudio(6)">next</button></a>
+			</div><br>
+
+			<!-- Q7 -->
+			<div class="question" id="Q7" style="display:none;">
+				<img class="album" src="img/Monday.jpg" style="width:300px">
+				<h5 class="card-title" style="text-align: center;">Monday - 窦靖童</h5>
+				<h3>Who likes this type of music the most?</h3>
+				<h3>谁最有可能喜欢这种风格的音乐</h3><br>
+				<div class="button">
+					<a href="#ED"><button class="no" onclick="alert('❌')")>A</button><img class="fan" src="img/no19.jpg" style="width:150px"></a>
+					<a href="#ED"><button class="no" onclick="alert('❌')")>B</button><img class="fan" src="img/no20.jpg" style="width:150px"></a>
+					<a href="#ED"><button class="yes" onclick="alert('❌')")>C</button><img class="fan" src="img/no1.jpg" style="width:150px"></a>
+					<a href="#ED"><button class="no" onclick="alert('✅')")>D</button><img class="fan" src="img/yes7.jpg" style="width:150px"></a>
+				</div>
+				<br>
+				<a href="#ED"><button class="next" onclick="end(),pauseAudio(6)">next</button></a>
+			</div><br>
+
+			<!--end-->
+			<div class="question" id="ED" style="display:none;">
+				<img class="album" src="img/fans.png" style="width:500px">
+				<h5 class="card-title" style="text-align: center;">Thank you for playing.</h5>
+				<h5 class="card-title" style="text-align: center;">EVERY KIND OF LOVE IS COOL... :)</h5>
+			</div><br>
+
+
+
+		</div>
+
+		<h6>灵感来自youtube视频：https://www.youtube.com/watch?v=Gt2w3gBw-wg</h6>
+
+	</body>
+
+	<script src="main.js"></script>
+
+</html>
