@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cupii Diary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="mylook.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- 添加侧边导航栏 -->
+    <div class="container">
+      <div class="menu pure-u-2-8 pure-u-md-1-3 pure-u-sm-1-3">
+        <img src="img/fairy.gif" style="width:100px"><br>
+        <a class="title" href="myweb.html">Cupii.</a>
+       <nav>
+         <ul>
+         <li><a href="diary.html" onclick="showdiary()">Diary</a></li>
+         <li><a href="snow.html">Snow</a></li>
+         <li><a href="works.html">Works</a></li>
+         <li><a href="handmade.html">Handmade</a></li>
+         <li><a href="about.html">About</a></li>
+       </nav>
+     </div>
+    <!--table-->
+      <div class="table pure-u-6-8 pure-u-md-2-3 pure-u-sm-2-3" id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <header>Welcome...</header>
+        <!--可拖动图片 -->
+        <div id="imageContainer">
+          <img id="draggableImage" src="img/letter.PNG" alt="Draggable Image" draggable="false">
+        </div>
+    </div>
+
+    <footer>
+    <p>The world is my oyster.</p>
+    <p>contact me:19876596268/butter0115@qq.com</p>
+    </footer>
+
+</div>
+
+    <script>
+    // 获取所有的 .image-container 元素
+    var imageContainers = document.querySelectorAll('.image-container');
+
+    // 遍历每个 .image-container 元素
+    imageContainers.forEach(function(container) {
+        // 监听鼠标悬停事件，播放动图
+        container.addEventListener('mouseenter', function() {
+            container.querySelector('.static-image').src = container.dataset.gifSrc;
+        });
+
+        // 监听鼠标移开事件，显示静态图片
+        container.addEventListener('mouseleave', function() {
+            container.querySelector('.static-image').src = container.dataset.staticSrc;
+        });
+    });
+
+    function showdiary() {
+    	box.style.display = "block";
+    }
+
+
+    // 实现图片拖拽
+    const img = document.getElementById('draggableImage');
+    let active = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
+    let xOffset = 0;
+    let yOffset = 0;
+
+    img.addEventListener('mousedown', dragStart, false);
+    document.addEventListener('mouseup', dragEnd, false);
+    document.addEventListener('mousemove', drag, false);
+
+    function dragStart(e) {
+      initialX = e.clientX - xOffset;
+      initialY = e.clientY - yOffset;
+
+      if (e.target === img) {
+        active = true;
+      }
+    }
+
+    function dragEnd(e) {
+      initialX = currentX;
+      initialY = currentY;
+
+      active = false;
+    }
+
+    function drag(e) {
+      if (active) {
+        e.preventDefault();
+
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+
+        xOffset = currentX;
+        yOffset = currentY;
+
+        setTranslate(currentX, currentY, img);
+      }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      </body>
+
+  </body>
+</html>

@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cupii Diary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+
+    html body {
+      height:auto;
+      background-color: white;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+
+    @keyframes fadeIn {
+      0% { opacity: 0;}
+      100% { opacity: 1;}
+
+    }
+
+    @font-face {
+      font-family: 'babibu';
+      src:url('font/babibu.ttf')format(truetype);
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .container {
+      margin:0;
+    }
+
+    .container .menu {
+      float:left;
+      padding: 50px 40px;
+      border-right: 1px dotted #dbc4f3;
+      height:3900px;
+    }
+
+    .container .menu .title {
+      font-size: 50px;
+      text-decoration: none;
+      color: #3f3957;
+      font-family: 'babibu',sans-serif;
+
+    }
+
+    .container .menu nav ul li {
+      transition: 0.3s all ease-in-out;
+    }
+
+    .container .menu ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .container .menu  nav ul li a {
+      font-family: 'babibu',sans-serif;
+      text-decoration: none;
+      color:#8187b8;
+      line-height: 30px;
+      padding: 0 20px;
+    }
+
+    .container .menu  nav ul  .active a {
+      font-family: 'babibu',sans-serif;
+      text-decoration: none;
+      color: #3f3957;
+    }
+
+    .container .menu nav ul li a:hover {
+      color: #433850;
+    }
+
+    .container .table {
+      float: right;
+      width: 75%;
+    }
+
+
+    .box {
+      margin:0;
+      height: 900px;
+    }
+
+    img {
+      margin:0;
+      border: 0;
+    }
+
+    #angle {
+      width: 50px;
+      float: right;
+      position: relative;
+      top: 30px;
+    }
+
+    #pic1 {
+      position: relative;
+      left: 100px;
+      top: 100px;
+    }
+
+    #pic2 {
+      position: relative;
+      left: 400px;
+    }
+
+    #pic3 {
+      position: relative;
+      left: 700px;
+    }
+
+    #pic4 {
+      position: relative;
+      left: 200px;
+      bottom: 100px;
+    }
+
+    #pic5 {
+      position: relative;
+      left: 500px;
+      bottom: 100px;
+    }
+
+    #pic6 {
+      position: relative;
+      left: 10px;
+      bottom: 230px;
+    }
+
+    #pic7 {
+      position: relative;
+      left: 830px;
+      bottom: 400px;
+    }
+
+    #pic8 {
+      position: relative;
+      left: 300px;
+      bottom: 400px;
+      transform: rotate(270deg);
+    }
+
+    #pic9 {
+      position: relative;
+      left: 670px;
+      bottom: 500px;
+    }
+
+    #pic10 {
+      position: relative;
+      bottom: 600px;
+    }
+
+    #pic11 {
+      position: relative;
+      left: 390px;
+      bottom: 600px;
+    }
+
+    #pic12 {
+      position: relative;
+      left: 800px;
+      bottom: 700px;
+    }
+
+    #pic13 {
+      position: relative;
+      left: 90px;
+      bottom: 850px;
+    }
+
+    #pic14 {
+      position: relative;
+      left: 500px;
+      bottom: 900px;
+    }
+
+    #pic15 {
+      position: relative;
+      left: 10px;
+      bottom: 800px;
+    }
+
+    #pic16 {
+      position: relative;
+      left: 340px;
+      bottom: 980px;
+    }
+
+    #pic17 {
+      position: relative;
+      left: 750px;
+      bottom: 1200px;
+    }
+
+    #pic18 {
+      position: relative;
+      left: 450px;
+      bottom: 1080px;
+    }
+
+    #pic19 {
+      position: relative;
+      left: 80px;
+      bottom: 1120px;
+    }
+
+    #pic20 {
+      position: relative;
+      left: 800px;
+      bottom: 1400px;
+    }
+
+    .box h4 {
+      float: right;
+      color: #ddd;
+    }
+
+    .image-container {
+        width: 150px;
+        margin: 10px;
+        position: relative;
+    }
+    .static-image {
+        width: 150px;
+        height: auto;
+    }
+    .gif-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .image-container:hover .gif-overlay {
+        opacity: 1;
+    }
+
+
+</style>
+
+</head>
+
+  <body>
+    <!-- 添加侧边导航栏 -->
+    <div class="container">
+      <div class="menu pure-u-2-8  pure-u-md-1-3 pure-u-sm-1-3">
+        <img src="img/fairy.gif" style="width:100px"><br>
+        <a class="title" href="myweb.html">Cupii.</a>
+       <nav>
+         <ul>
+         <li class="active"><a href="diary.html">Diary</a></li>
+         <li><a href="snow.html">Snow</a></li>
+         <li><a href="works.html">Works</a></li>
+         <li><a href="handmade.html">Handmade</a></li>
+         <li><a href="about.html">About</a></li>
+       </nav>
+     </div>
+    <!--table-->
+      <div class="table pure-u-6-8  pure-u-md-2-3 pure-u-sm-2-3">
+    <!--diary部分 -->
+  <div class="box" id="box">
+
+    <div id="angle" >
+        <img class="static-image" src="img/angle.gif" alt="*">
+    </div>
+
+    <div id="pic1" class="image-container" data-gif-src="img/01.gif" data-static-src="img/01.jpg">
+        <img class="static-image" src="img/01.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic2" class="image-container" data-gif-src="img/02.gif" data-static-src="img/02.jpg">
+        <img class="static-image" src="img/02.jpg" alt="*">
+        <div class="gif-overlay"></div>
+    </div>
+
+    <div id="pic3" class="image-container" data-gif-src="img/03.gif" data-static-src="img/03.jpg">
+        <img class="static-image" src="img/03.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic4" class="image-container" data-gif-src="img/04.gif" data-static-src="img/04.jpg">
+        <img class="static-image" src="img/04.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic5" class="image-container" data-gif-src="img/05.gif" data-static-src="img/05.jpg">
+        <img class="static-image" src="img/05.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic6" class="image-container" data-gif-src="img/06.gif" data-static-src="img/06.jpg">
+        <img class="static-image" src="img/06.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic7" class="image-container" data-gif-src="img/07.gif" data-static-src="img/07.jpg">
+        <img class="static-image" src="img/07.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic8" class="image-container" data-gif-src="img/08.gif" data-static-src="img/08.jpg">
+        <img class="static-image" src="img/08.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic9" class="image-container" data-gif-src="img/09.gif" data-static-src="img/09.jpg">
+        <img class="static-image" src="img/09.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic10" class="image-container" data-gif-src="img/10.gif" data-static-src="img/10.jpg">
+        <img class="static-image" src="img/10.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic11" class="image-container" data-gif-src="img/12.gif" data-static-src="img/12.jpg">
+        <img class="static-image" src="img/12.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic12" class="image-container" data-gif-src="img/11.gif" data-static-src="img/11.jpg">
+        <img class="static-image" src="img/11.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic13" class="image-container" data-gif-src="img/14.gif" data-static-src="img/14.jpg">
+        <img class="static-image" src="img/14.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic14" class="image-container" data-gif-src="img/15.gif" data-static-src="img/15.jpg">
+        <img class="static-image" src="img/15.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic15" class="image-container" data-gif-src="img/16.gif" data-static-src="img/16.jpg">
+        <img class="static-image" src="img/16.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic16" class="image-container" data-gif-src="img/19.gif" data-static-src="img/19.jpg">
+        <img class="static-image" src="img/19.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic17" class="image-container" data-gif-src="img/17.gif" data-static-src="img/17.jpg">
+        <img class="static-image" src="img/17.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic18" class="image-container" data-gif-src="img/18.gif" data-static-src="img/18.jpg">
+        <img class="static-image" src="img/18.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic19" class="image-container" data-gif-src="img/20.gif" data-static-src="img/20.jpg">
+        <img class="static-image" src="img/20.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <div id="pic20" class="image-container" data-gif-src="img/21.gif" data-static-src="img/21.jpg">
+        <img class="static-image" src="img/21.jpg" alt="*">
+        <div class="gif-overlay"> </div>
+    </div>
+
+    <h4>"enjoy your life. :)"</h4>
+
+  </div>
+
+    </div>
+
+  </div>
+
+    <script>
+    // 获取所有的 .image-container 元素
+    var imageContainers = document.querySelectorAll('.image-container');
+
+    // 遍历每个 .image-container 元素
+    imageContainers.forEach(function(container) {
+        // 监听鼠标悬停事件，播放动图
+        container.addEventListener('mouseenter', function() {
+            container.querySelector('.static-image').src = container.dataset.gifSrc;
+        });
+
+        // 监听鼠标移开事件，显示静态图片
+        container.addEventListener('mouseleave', function() {
+            container.querySelector('.static-image').src = container.dataset.staticSrc;
+        });
+    });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      </body>
+
+  </body>
+</html>

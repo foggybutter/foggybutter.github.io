@@ -1,0 +1,119 @@
+html body {
+  height: 150%;
+  background-image: url("img/bgpic.gif");
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-color: #f5f4d6;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+
+}
+
+@font-face {
+  font-family: 'babibu';
+  src:url('font/babibu.ttf')format(truetype);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.container {
+  margin:0;
+}
+
+.container .menu {
+  float:left;
+  padding: 50px 40px;
+  border-right: 1px dotted #dbc4f3;
+  height:900px;
+}
+
+.container .menu .title {
+  font-size: 50px;
+  text-decoration: none;
+  color: #3f3957;
+  font-family: 'babibu',sans-serif;
+
+}
+
+.container .menu nav ul li {
+  transition: 0.3s all ease-in-out;
+}
+
+.container .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container .menu  nav ul li a {
+  font-family: 'babibu',sans-serif;
+  text-decoration: none;
+  color:#8187b8;
+  line-height: 30px;
+  padding: 0 20px;
+}
+
+.container .menu nav ul li a:hover {
+  color: #433850;
+}
+
+.container .table {
+  float: right;
+  width: 75%;
+}
+
+.container .table header {
+  font-family: 'babibu',sans-serif;
+  color:#8187b8;
+  font-size: 100px;
+  position: relative;
+  top:100px;
+  left:300px;
+
+}
+
+.container .table .centerimg {
+  display: flex;
+  position: relative;
+  height: 100px;
+  float: left;
+  top:120px;
+  vertical-align:middle;
+  border-radius: 25px;
+  margin:0;
+}
+
+.container .table .centerimg img {
+  position: absolute;
+  height: 250px;
+  display: block;
+  margin:  0 auto;
+}
+
+
+#imageContainer {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  top: 100px;
+  left: 800px;
+  cursor: move;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  line-height: 6px;
+  font-weight: lighter;
+  font-size: 10px;
+  font-style: italic;
+
+}
